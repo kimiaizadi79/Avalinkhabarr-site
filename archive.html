@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark" data-font-size="md">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>آرشیو جامع اخبار | اولین خبر</title>
+  <meta name="description" content="دسترسی به آرشیو گاه‌شمار اخبار، گزارش‌های ویژه و پرونده‌های تحلیلی منتشر شده در خبرگزاری اولین خبر." />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-meta">
+        <a href="index.html" style="color: var(--brand-primary); font-weight: 600;">← صفحه نخست</a>
+        <span class="meta-separator">·</span>
+        <span>آرشیو تقویمی اخبار سال ۱۴۰۳</span>
+      </div>
+      <div class="top-bar-actions">
+        <button class="theme-toggle-btn" aria-label="تغییر تم">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+          <div class="brand-emblem">۱خ</div>
+          <div class="brand-text">
+            <h1><span>اولین خبر</span> <span class="brand-en">AVALIN KHABAR</span></h1>
+            <p>خبرگزاری مستقل و تحلیلی ایران</p>
+          </div>
+        </a>
+      </div>
+      <button class="nav-mobile-btn" id="mobile-menu-trigger" aria-label="منوی موبایل">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <div class="container nav-inner">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html">صفحه نخست</a></li>
+        <li class="nav-item"><a href="latest-news.html">آخرین اخبار</a></li>
+        <li class="nav-item"><a href="politics.html">سیاسی</a></li>
+        <li class="nav-item"><a href="economy.html">اقتصادی</a></li>
+        <li class="nav-item"><a href="social.html">اجتماعی</a></li>
+        <li class="nav-item"><a href="culture.html">فرهنگی</a></li>
+        <li class="nav-item"><a href="sports.html">ورزشی</a></li>
+        <li class="nav-item"><a href="technology.html">فناوری</a></li>
+        <li class="nav-item"><a href="international.html">بین‌الملل</a></li>
+        <li class="nav-item"><a href="health.html">سلامت</a></li>
+        <li class="nav-item"><a href="multimedia.html">چندرسانه‌ای</a></li>
+        <li class="nav-item active"><a href="archive.html">آرشیو اخبار</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="main-content" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <!-- Archive Selector Banner -->
+      <div style="background: var(--bg-surface-1); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
+        <h1 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">گاه‌شمار و آرشیو ماهانه تحریریه</h1>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          انتخاب بر اساس سال، ماه و سرویس خبری جهت بازبینی گزارش‌های گذشته.
+        </p>
+
+        <!-- Months Pills Filter -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;" id="archive-months-bar"></div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-subtle); padding-top: 1rem; flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">سرویس موضوعی:</span>
+            <select id="archive-cat-filter" onchange="renderArchiveNews()" style="background: var(--bg-surface-2); border: 1px solid var(--border-subtle); padding: 0.35rem 0.75rem; border-radius: 4px; font-size: 0.85rem;">
+              <option value="all">تمامی حوزه‌ها</option>
+              <option value="politics">سیاسی</option>
+              <option value="economy">اقتصادی</option>
+              <option value="technology">فناوری</option>
+              <option value="sports">ورزشی</option>
+            </select>
+          </div>
+          <div id="archive-count-display" style="font-size: 0.85rem; color: var(--text-muted);"></div>
+        </div>
+      </div>
+
+      <!-- Archive News Cards -->
+      <div class="grid-3col" id="archive-news-grid"></div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <p>© تمامی حقوق مادی و معنوی برای خبرگزاری اولین خبر محفوظ است - ۱۴۰۳</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    let selectedMonth = 'اسفند ۱۴۰۳';
+
+    function initArchive() {
+      const monthsBar = document.getElementById('archive-months-bar');
+      monthsBar.innerHTML = AVALIN_DATA.archiveMonths.map(m => `
+        <button class="btn ${m.name === selectedMonth ? 'btn-primary' : 'btn-outline'}" onclick="selectMonth('${m.name}', this)" style="font-size: 0.82rem; padding: 0.4rem 0.85rem;">
+          ${m.name} (${m.count.toLocaleString('fa-IR')})
+        </button>
+      `).join('');
+
+      renderArchiveNews();
+    }
+
+    function selectMonth(monthName, btn) {
+      selectedMonth = monthName;
+      document.querySelectorAll('#archive-months-bar button').forEach(b => b.className = 'btn btn-outline');
+      btn.className = 'btn btn-primary';
+      renderArchiveNews();
+    }
+
+    function renderArchiveNews() {
+      const cat = document.getElementById('archive-cat-filter').value;
+      let articles = AVALIN_DATA.articles;
+
+      if (cat !== 'all') {
+        articles = articles.filter(a => a.category === cat);
+      }
+
+      document.getElementById('archive-count-display').textContent = `نمایش ${articles.length.toLocaleString('fa-IR')} گزارش در آرشیو ${selectedMonth}`;
+
+      const grid = document.getElementById('archive-news-grid');
+      grid.innerHTML = articles.map(art => `
+        <article class="dossier-card">
+          <div class="dossier-img-wrap">
+            <img src="${art.image}" alt="${art.title}" loading="lazy" />
+            <span class="dossier-badge-pos">${art.categoryTitle}</span>
+          </div>
+          <div class="dossier-body">
+            <div style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 0.35rem;">
+              <span>${selectedMonth} · ${art.kicker || 'گزارش'}</span>
+            </div>
+            <h3><a href="news-detail.html?id=${art.id}">${art.title}</a></h3>
+            <p>${art.lead.substring(0, 115)}...</p>
+            <div class="dossier-footer">
+              <span>زمان مطالعه: ${art.readTime}</span>
+              <a href="news-detail.html?id=${art.id}" style="color: var(--brand-primary); font-weight: 600;">مشاهده گزارش ←</a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      updateBookmarkButtons();
+    }
+
+    document.addEventListener('DOMContentLoaded', initArchive);
+  </script>
+</body>
+</html>

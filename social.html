@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark" data-font-size="md">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سرویس اجتماعی و شهری | اولین خبر</title>
+  <meta name="description" content="مسائل شهری، محیط‌زیست، آموزش، رفاه عمومی و دغدغه‌های شهروندان در خبرگزاری اولین خبر." />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-meta">
+        <a href="index.html" style="color: var(--brand-primary); font-weight: 600;">← بازگشت به صفحه نخست</a>
+        <span class="meta-separator">·</span>
+        <span>سرویس اجتماعی و مطالبات مردمی</span>
+      </div>
+      <div class="top-bar-actions">
+        <button class="theme-toggle-btn" aria-label="تغییر تم">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+          <div class="brand-emblem">۱خ</div>
+          <div class="brand-text">
+            <h1><span>اولین خبر</span> <span class="brand-en">AVALIN KHABAR</span></h1>
+            <p>خبرگزاری مستقل و تحلیلی ایران</p>
+          </div>
+        </a>
+      </div>
+      <div class="header-search">
+        <div class="search-trigger-box">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span>جستجو در اخبار اجتماعی و شهری...</span>
+          </div>
+          <span class="search-shortcut-badge">Ctrl+K</span>
+        </div>
+      </div>
+      <button class="nav-mobile-btn" id="mobile-menu-trigger" aria-label="منوی موبایل">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="container nav-inner">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html">صفحه نخست</a></li>
+        <li class="nav-item"><a href="latest-news.html">آخرین اخبار</a></li>
+        <li class="nav-item"><a href="politics.html">سیاسی</a></li>
+        <li class="nav-item"><a href="economy.html">اقتصادی</a></li>
+        <li class="nav-item active"><a href="social.html">اجتماعی</a></li>
+        <li class="nav-item"><a href="culture.html">فرهنگی</a></li>
+        <li class="nav-item"><a href="sports.html">ورزشی</a></li>
+        <li class="nav-item"><a href="technology.html">فناوری</a></li>
+        <li class="nav-item"><a href="international.html">بین‌الملل</a></li>
+        <li class="nav-item"><a href="health.html">سلامت</a></li>
+        <li class="nav-item"><a href="multimedia.html">چندرسانه‌ای</a></li>
+        <li class="nav-item"><a href="archive.html">آرشیو اخبار</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content" style="padding-top: 2rem;">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(17, 26, 46, 0.95) 100%); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
+        <span class="category-tag" style="background: #f59e0b; color: #ffffff; margin-bottom: 0.5rem;">جامعه و شهروندی</span>
+        <h1 style="font-size: 2rem; font-weight: 800;">سرویس اجتماعی و محیط‌زیست</h1>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.35rem; max-width: 650px;">
+          انعکاس بی‌واسطه صدای مردم، پایش بحران‌های زیست‌محیطی، مسکن شهری و چالش‌های نظام آموزشی.
+        </p>
+      </div>
+
+      <div class="grid-3col" id="category-news-grid"></div>
+      <div class="pagination-wrap" id="pagination-controls"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <p>© تمامی حقوق مادی و معنوی برای خبرگزاری اولین خبر محفوظ است - ۱۴۰۳</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const articles = AVALIN_DATA.articles.filter(a => a.category === 'social' || a.category === 'health');
+      const grid = document.getElementById('category-news-grid');
+      grid.innerHTML = articles.map(art => `
+        <article class="dossier-card">
+          <div class="dossier-img-wrap">
+            <img src="${art.image}" alt="${art.title}" loading="lazy" />
+            <span class="dossier-badge-pos">${art.categoryTitle}</span>
+          </div>
+          <div class="dossier-body">
+            <div style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 0.35rem;">
+              <span>${art.timeAgo} · ${art.date}</span>
+            </div>
+            <h3><a href="news-detail.html?id=${art.id}">${art.title}</a></h3>
+            <p>${art.lead.substring(0, 115)}...</p>
+            <div class="dossier-footer">
+              <span>زمان مطالعه: ${art.readTime}</span>
+              <a href="news-detail.html?id=${art.id}" style="color: var(--brand-primary); font-weight: 600;">مطالعه کامل ←</a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      document.getElementById('pagination-controls').innerHTML = '<button class="page-btn active">۱</button>';
+      updateBookmarkButtons();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark" data-font-size="md">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تماس با ما و دفاتر استانی | اولین خبر</title>
+  <meta name="description" content="ارتباط مستقیم با تحریریه، روابط عمومی، واحد آگهی‌ها و ارسال بازخورد به خبرگزاری اولین خبر." />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-meta">
+        <a href="index.html" style="color: var(--brand-primary); font-weight: 600;">← صفحه نخست</a>
+        <span class="meta-separator">·</span>
+        <span>میز ارتباط با مخاطبان و روابط عمومی</span>
+      </div>
+      <div class="top-bar-actions">
+        <button class="theme-toggle-btn" aria-label="تغییر تم">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="brand-wrapper">
+        <a href="index.html" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+          <div class="brand-emblem">۱خ</div>
+          <div class="brand-text">
+            <h1><span>اولین خبر</span> <span class="brand-en">AVALIN KHABAR</span></h1>
+            <p>خبرگزاری مستقل و تحلیلی ایران</p>
+          </div>
+        </a>
+      </div>
+      <button class="nav-mobile-btn" id="mobile-menu-trigger" aria-label="منوی موبایل">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <div class="container nav-inner">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html">صفحه نخست</a></li>
+        <li class="nav-item"><a href="latest-news.html">آخرین اخبار</a></li>
+        <li class="nav-item"><a href="politics.html">سیاسی</a></li>
+        <li class="nav-item"><a href="economy.html">اقتصادی</a></li>
+        <li class="nav-item"><a href="social.html">اجتماعی</a></li>
+        <li class="nav-item"><a href="culture.html">فرهنگی</a></li>
+        <li class="nav-item"><a href="sports.html">ورزشی</a></li>
+        <li class="nav-item"><a href="technology.html">فناوری</a></li>
+        <li class="nav-item"><a href="international.html">بین‌الملل</a></li>
+        <li class="nav-item"><a href="health.html">سلامت</a></li>
+        <li class="nav-item"><a href="multimedia.html">چندرسانه‌ای</a></li>
+        <li class="nav-item"><a href="archive.html">آرشیو اخبار</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="main-content" style="padding-top: 2rem;">
+    <div class="container">
+      
+      <div style="background: var(--bg-surface-1); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2.5rem;">
+        <span class="category-tag" style="background: rgba(37, 99, 235, 0.2); color: #60a5fa; margin-bottom: 0.5rem;">پاسخگویی سریع</span>
+        <h1 style="font-size: 2rem; font-weight: 800;">تماس با تحریریه و پشتیبانی اولین خبر</h1>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 0.35rem; max-width: 680px;">
+          دیدگاه‌ها، انتقادات، اصلاحیه‌های خبری و پیام‌های شما مستقیماً توسط دبیرخانه سردبیری بررسی و پیگیری خواهد شد.
+        </p>
+      </div>
+
+      <div class="grid-2col" style="margin-bottom: 3rem;">
+        <!-- Contact Form Card -->
+        <div class="glass-card" style="padding: 2rem;">
+          <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1.25rem;">فرم ارسال پیام الکترونیکی</h2>
+          
+          <form id="contact-form" onsubmit="handleContactSubmit(event)">
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">نام و نام خانوادگی *</label>
+              <input type="text" id="contact-name" required placeholder="مثال: دکتر مهدی کاظمی" style="width: 100%; background: var(--bg-surface-2); border: 1px solid var(--border-subtle); padding: 0.65rem; border-radius: var(--radius-sm); font-size: 0.9rem;" />
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">آدرس ایمیل *</label>
+                <input type="email" id="contact-email" required placeholder="name@domain.com" style="width: 100%; background: var(--bg-surface-2); border: 1px solid var(--border-subtle); padding: 0.65rem; border-radius: var(--radius-sm); font-size: 0.9rem;" />
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">شماره تماس</label>
+                <input type="tel" id="contact-phone" placeholder="۰۹۱۲۰۰۰۰۰۰۰" style="width: 100%; background: var(--bg-surface-2); border: 1px solid var(--border-subtle); padding: 0.65rem; border-radius: var(--radius-sm); font-size: 0.9rem;" />
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">بخش مربوطه *</label>
+              <select id="contact-dept" style="width: 100%; background: var(--bg-surface-2); border: 1px solid var(--border-subtle); padding: 0.65rem; border-radius: var(--radius-sm); font-size: 0.9rem;">
+                <option value="editorial">سردبیری و پیگیری سوژه‌ها</option>
+                <option value="correction">ارسال اصلاحیه یا تکذیبیه خبری</option>
+                <option value="ads">واحد بازرگانی و اشتراک بولتن‌ها</option>
+                <option value="tech">پشتیبانی فنی وب‌سایت</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">متن پیام *</label>
+              <textarea id="contact-message" rows="5" required placeholder="توضیحات و پیام خود را به دقت مرقوم فرمایید..." style="width: 100%; background: var(--bg-surface-2); border: 1px solid var(--border-subtle); padding: 0.65rem; border-radius: var(--radius-sm); font-size: 0.9rem; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.75rem;">ارسال پیام به دبیرخانه</button>
+          </form>
+        </div>
+
+        <!-- Bureau Information Card -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="glass-card" style="padding: 2rem;">
+            <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 1rem;">نشانی و اطلاعات تماس دفتر مرکزی</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.92rem; color: var(--text-secondary);">
+              <li style="display: flex; gap: 0.65rem;">
+                <strong style="color: var(--text-primary); min-width: 85px;">نشانی:</strong>
+                <span>تهران، میدان ونک، بزرگراه حقانی، پلاک ۴۲، برج رسانه، طبقه ۸</span>
+              </li>
+              <li style="display: flex; gap: 0.65rem;">
+                <strong style="color: var(--text-primary); min-width: 85px;">تلفن تحریریه:</strong>
+                <span dir="ltr">۰۲۱-۸۸۴۵۰۰۰۰ (۱۰ خط مستقیم)</span>
+              </li>
+              <li style="display: flex; gap: 0.65rem;">
+                <strong style="color: var(--text-primary); min-width: 85px;">فکس:</strong>
+                <span dir="ltr">۰۲۱-۸۸۴۵۰۰۰۱</span>
+              </li>
+              <li style="display: flex; gap: 0.65rem;">
+                <strong style="color: var(--text-primary); min-width: 85px;">ایمیل رسمی:</strong>
+                <span>editorial@avalinkhabar.ir</span>
+              </li>
+              <li style="display: flex; gap: 0.65rem;">
+                <strong style="color: var(--text-primary); min-width: 85px;">ساعات کاری:</strong>
+                <span>شنبه تا پنج‌شنبه از ساعت ۰۷:۰۰ الی ۲۳:۰۰</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Map Representation Container -->
+          <div class="glass-card" style="padding: 1.5rem; text-align: center;">
+            <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem;">موقعیت مکانی دفتر تهران</h4>
+            <div style="height: 180px; background: var(--bg-surface-2); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;">
+              <span style="font-size: 2rem;">📍</span>
+              <span style="font-size: 0.85rem; font-weight: 700;">برج رسانه تهران - بزرگراه حقانی</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">دسترسی آسان از ایستگاه مترو شهید حقانی</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <p>© تمامی حقوق مادی و معنوی برای خبرگزاری اولین خبر محفوظ است - ۱۴۰۳</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+
+      const tracking = 'MSG-' + Math.floor(100000 + Math.random() * 900000);
+
+      const modalHtml = `
+        <div class="modal-backdrop active" id="contact-success-modal">
+          <div class="modal-container" style="max-width: 480px; text-align: center; padding: 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📬</div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.75rem;">پیام شما دریافت شد</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+              جناب آقای/سرکار خانم <strong>${name}</strong>، پیام شما با شماره رهگیری زیر در نوبت پاسخگویی قرار گرفت. پاسخ به آدرس ایمیل <strong>${email}</strong> ارسال خواهد شد.
+            </p>
+            <div style="background: var(--bg-surface-2); border: 1px solid var(--border-subtle); padding: 0.65rem; border-radius: 4px; font-family: monospace; font-size: 1rem; color: var(--brand-primary); margin-bottom: 1.25rem;">
+              ${tracking}
+            </div>
+            <button class="btn btn-primary" onclick="closeModal('contact-success-modal'); document.getElementById('contact-form').reset();">متوجه شدم</button>
+          </div>
+        </div>
+      `;
+      document.body.insertAdjacentHTML('beforeend', modalHtml);
+    }
+  </script>
+</body>
+</html>
